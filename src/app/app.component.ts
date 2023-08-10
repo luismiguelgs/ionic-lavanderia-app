@@ -10,6 +10,42 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  private wide: boolean = false;
+
+  public appPages = [
+    {
+      titulo: 'Inicio',
+      url: 'home',
+      icon: 'home-outline'
+    },
+    {
+      titulo: 'Pedidos',
+      url: 'pedidos',
+      icon: 'create-outline'
+    },
+    {
+      titulo: 'Clientes',
+      url: 'clientes',
+      icon: 'people-outline'
+    },
+    {
+      titulo: 'Productos',
+      url: 'productos',
+      icon: 'layers-outline'
+    },
+    {
+      titulo: 'Caja',
+      url: 'caja',
+      icon: 'wallet-outline'
+    },
+    {
+      titulo: 'Impagos',
+      url: 'impagos',
+      icon: 'cash-outline'
+    }
+  ];
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -23,5 +59,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  onLogout()
+  {
+
   }
 }
